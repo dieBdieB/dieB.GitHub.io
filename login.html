@@ -1,0 +1,39 @@
+<html>
+ <head>
+  <title>登录页面</title>
+ 
+  </head>
+  <body>
+   <script type = "text/javascript">
+      function check() {
+	var buhin = document.login.id.value
+	  if((buhin.indexOf('CA1') == 0)&&(document.login.password.value == "666")) {
+		return true
+	  }
+	alert("零件号或密码错误，请重新输入！")
+	return false
+      }
+   </script>
+    <form name = "login" id = "1" action = "msg.html" method = "get" align = "center" onsubmit = "return check()">
+       <table name = tb id = "2" align = "center" width = "700">
+	<tr align="center">
+	  <td height = "30" width = "80" align = "center" style = "font-size:30">工具编号</td>
+	  <td align = "center">
+		<input type="text" name = "id" id = "3" style = "height:80px;width:550px;font-size:50" placeholder = "请输入提示符+工具编号" >
+	  </td>
+	</tr>
+        <tr>
+	  <td align = "center" style = "font-size:30">密码</td>
+	  <td align = "center">
+		<input type = "password" name = "password" style = "height:80px;width:550px;font-size:55">
+	  </td>
+	</tr>
+	<tr>
+	  <td align = "center" colspan = "2">
+		<input type = "submit" value = "查询" style = "height:60px;width:100px;font-size:30" name = "sub">
+          </td> 
+	</tr>
+       </table> 
+     </form>
+   </body>
+</html>
